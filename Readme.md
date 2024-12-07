@@ -5,6 +5,7 @@ Solution Sync Server Data Sample
 - Transfer Data 
 ```mermaid
 sequenceDiagram
+    autonumber
     participant A as Data
     participant B as History Data
     participant C as Data Server
