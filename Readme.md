@@ -4,16 +4,16 @@ Solution Sync Server Data Sample
 - Local Storage 
 - Transfer Data 
 ```mermaid
-graph TD
-    A[Local Storage] --> B[History Data Local Storage]
-    A --> C[Sync Server Data]
-    C --> D[Transfer Data]
-    D --> E[Sync Server Data]
-    E --> F[Local Storage]
-    F --> G[History Data Local Storage]
-    G --> H[Sync Server Data]
-    H --> I[Transfer Data]
-    I --> J[Sync Server Data]
-    J --> K[Local Storage]
-    K --> L[History Data Local Storage]
+sequenceDiagram
+    participant A as Data
+    participant B as History Data
+    participant C as Data Server
+    participant D as History Data Server
+    A->>B: Sync Data
+    B->>C: Sync Data
+    C->>D: Sync Data
+    D->>C: Sync Data
+    C->>B: Sync Data
+    B->>A: Sync Data
+    
 ```
